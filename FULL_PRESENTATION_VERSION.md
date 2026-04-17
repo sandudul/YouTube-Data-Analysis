@@ -62,8 +62,8 @@ Use this as your final speaking and slide-content reference.
 
 ### On-Slide Content
 - Dataset: Global YouTube Statistics (secondary dataset)
-- Records after cleaning: **949**
-- Number of categories: **18**
+- Records after cleaning: **987**
+- Number of categories: **19**
 - Variable mapping:
   - Resonance proxy: `video.views`
   - Engagement proxy: `subscribers`
@@ -71,7 +71,7 @@ Use this as your final speaking and slide-content reference.
   - Quantity proxy: `uploads`
 
 ### Speaker Notes
-"We use 949 cleaned observations across 18 content categories. We define resonance as total video views and engagement as total subscribers. Content quantity is represented by uploads, which allows us to test the quality-versus-quantity argument."
+"We use 987 cleaned observations across 19 content categories. We define resonance as total video views and engagement as total subscribers. Content quantity is represented by uploads, which allows us to test the quality-versus-quantity argument."
 
 ### Transition
 "Before analysis, we applied a minimal but important cleaning pipeline."
@@ -136,8 +136,8 @@ Use this as your final speaking and slide-content reference.
   - H0: Mean views are equal across all categories
   - H1: At least one category has a different mean view level
 - Results:
-  - F-statistic = **5.3855**
-  - p-value = **4.72e-11**
+  - F-statistic = **5.0849**
+  - p-value = **3.07e-11**
 - Decision:
   - Since p-value < 0.05, **Reject H0**
 
@@ -155,15 +155,15 @@ Use this as your final speaking and slide-content reference.
 
 ### On-Slide Content
 - Test: Pearson correlation between `uploads` and `subscribers`
-- Sample used: n = **949**
+- Sample used: n = **987**
 - Results:
-  - r = **0.0809**
-  - p-value = **0.0127**
+  - r = **0.0889**
+  - p-value = **0.00520**
 - Interpretation:
   - Relationship is statistically detectable but **very weak** in magnitude
 
 ### Speaker Notes
-"Even though the p-value is below 0.05, the correlation coefficient is only 0.0809, which is a weak effect. So the practical impact of upload count alone is limited. This supports the argument that quantity without resonance is not enough for meaningful engagement growth."
+"Even though the p-value is below 0.05, the correlation coefficient is only 0.0889, which is a weak effect. So the practical impact of upload count alone is limited. This supports the argument that quantity without resonance is not enough for meaningful engagement growth."
 
 ### Transition
 "After descriptive and inferential evidence, we build a predictive model."
@@ -177,13 +177,13 @@ Use this as your final speaking and slide-content reference.
 ### On-Slide Content
 - Model: `subscribers ~ video.views`
 - Estimated equation:
-  - Subscribers = **12,220,195.73 + 0.000952 × video.views**
+  - Subscribers = **11,932,454 + 0.0009586 × video.views**
 - Goodness of fit:
-  - R-squared = **0.6174**
+  - R-squared = **0.6794**
 - Visual: `predictive_plot.png`
 
 ### Speaker Notes
-"The slope is positive, meaning higher views are associated with higher subscribers. An R-squared of 0.6174 indicates the model explains about 61.74% of subscriber variance using views alone, which is strong for a simple one-predictor model. This provides predictive support for the statement."
+"The slope is positive, meaning higher views are associated with higher subscribers. An R-squared of 0.6794 indicates the model explains about 67.94% of subscriber variance using views alone, which is strong for a simple one-predictor model. This provides predictive support for the statement."
 
 ### Transition
 "Now we integrate all three analysis layers into one conclusion."
@@ -242,7 +242,7 @@ Use this as your final speaking and slide-content reference.
 - Why:
   1. Category significantly influences views (ANOVA)
   2. Upload volume has weak practical correlation with subscribers
-  3. Views predict subscribers with substantial explanatory power (R² = 0.6174)
+  3. Views predict subscribers with substantial explanatory power (R² = 0.6794)
 - Practical takeaway:
   - Optimize for resonant content strategy, not just publishing frequency
 
@@ -276,22 +276,22 @@ Use this as your final speaking and slide-content reference.
 ---
 
 ## Appendix A - Exact Values You Can Paste Into Slides
-- Clean sample size: **949**
-- Unique categories: **18**
+- Clean sample size: **987**
+- Unique categories: **19**
 - Top categories by mean views:
-  - Shows: **34,323,595,731**
-  - Trailers: **16,631,363,450**
-  - Education: **15,480,319,767**
+  - Shows: **34,323,602,070**
+  - Trailers: **16,631,358,804**
+  - Education: **15,480,321,620**
 - ANOVA:
-  - F = **5.3855**
-  - p = **4.7214e-11**
+  - F = **5.0849**
+  - p = **3.0699e-11**
 - Correlation (`uploads`, `subscribers`):
-  - r = **0.0809**
-  - p = **0.0127**
+  - r = **0.0889**
+  - p = **0.0052019**
 - Regression (`subscribers ~ video.views`):
-  - Intercept = **12,220,195.73**
-  - Slope = **0.00095196**
-  - R² = **0.6174**
+  - Intercept = **11,932,454**
+  - Slope = **0.0009586346**
+  - R² = **0.6794078**
 
 ---
 
