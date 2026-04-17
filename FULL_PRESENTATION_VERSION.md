@@ -86,10 +86,15 @@ Use this as your final speaking and slide-content reference.
 - Tool: R script `analysis.R`
 - Cleaning rule used:
   - Remove rows with missing values in `video.views`, `subscribers`, `category`
+  - standardizing category labels
+  - handling nan categories
+  - removing missing key values excluding zero view records 
 - Reason:
   - Ensure valid statistical testing and model estimation
 - Result:
-  - Final usable sample size = **949**
+  - Final usable sample size = **987 rows**
+  - Rows removed: **8**
+  - not specified category count: **39**
 
 ### Speaker Notes
 "Our cleaning is aligned with the assignment’s statistical modelling focus. We dropped rows with missing values in core analysis variables to avoid biased estimates and runtime model issues. We did not over-filter, so we preserved data diversity."
