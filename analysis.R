@@ -38,7 +38,7 @@ print(head(category_stats))
 
 # Plot the top 10 categories by average views
 ggplot(head(category_stats, 10), aes(x = reorder(category, avg_views), y = avg_views)) +
-  geom_col(fill = "steelblue") +
+  geom_col(fill = "black") +
   coord_flip() +
   labs(
     title = "Top 10 Categories by Average Views (Resonance)",
