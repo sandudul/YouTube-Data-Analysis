@@ -48,6 +48,44 @@ ggplot(head(category_stats, 10), aes(x = reorder(category, avg_views), y = avg_v
   theme_minimal()
 ggsave("descriptive_plot.png")
 
+# Plot the distribution of total video views for the most common categories
+top_categories <- df_clean %>%
+  count(category, sort = TRUE) %>%
+  slice_head(n = 8) %>%
+  pull(category)
+
+df_top_categories <- df_clean %>%
+  filter(category %in% top_categories)
+
+ggplot(df_top_categories, aes(x = reorder(category, video.views, FUN = median), y = video.views)) +
+  geom_boxplot(outlier.alpha = 0.2) +
+  coord_flip() +
+  scale_y_log10() +
+  labs(
+    title = "Distribution of Total Video Views (Top Categories)",
+    x = "Category",
+    y = "Total Video Views (log10 scale)"
+  ) +
+  theme_minimal()
+ggsave("descriptive_views_distribution.png")
+
+# Plot the relationship between uploads and subscribers (Quantity vs Audience)
+df_uploads_subs <- df_clean %>%
+  filter(!is.na(uploads), !is.na(subscribers), uploads > 0, subscribers > 0)
+
+ggplot(df_uploads_subs, aes(x = uploads, y = subscribers)) +
+  geom_point(alpha = 0.25) +
+  geom_smooth(method = "lm", se = FALSE, col = "red") +
+  scale_x_log10() +
+  scale_y_log10() +
+  labs(
+    title = "Uploads vs Subscribers (log-log)",
+    x = "Uploads (log10 scale)",
+    y = "Subscribers (log10 scale)"
+  ) +
+  theme_minimal()
+ggsave("descriptive_uploads_vs_subscribers.png")
+
 # --- 2. Inferential Analytics (Hypothesis Testing) ---
 # Hypothesis:
 # H0 (Null): The type of content (Category) has NO effect on engagement (Views).
