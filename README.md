@@ -1,4 +1,4 @@
-# Youtube Statistics Analysis (TPSM Group Assignment)
+# Youtube Statistics Analysis
 
 This repository contains our R-based statistical analysis for the TPSM group assignment.
 
