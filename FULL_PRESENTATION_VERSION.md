@@ -36,27 +36,43 @@ Use this as your final speaking and slide-content reference.
 
 ---
 
-## Slide 2 - Problem Statement and Objectives
+## Slide 2 - Problem Statement
 ### Slide Title
-**Problem Context and Objectives**
+**Problem Context**
 
 ### On-Slide Content
 - Problem: Why do some channels gain significantly higher engagement than others?
 - Core question: Is engagement driven more by content resonance than by upload volume?
-- Objectives:
-  1. Identify high-resonance categories
-  2. Test if category significantly affects engagement
-  3. Model engagement as a function of resonance
+- Focus of analysis:
+  - Resonance (views) vs engagement (subscribers)
+  - Content type (category) vs quantity (uploads)
 
 ### Speaker Notes
 "In platform ecosystems like YouTube, creators often assume posting more content guarantees growth. Our project tests a stronger hypothesis: resonance, measured through views and category response, is a more meaningful driver of engagement than pure volume."
 
 ### Transition
-"Next, we show the dataset and the variables we mapped to resonance and engagement."
+"Next, we outline our analytical objectives." 
 
 ---
 
-## Slide 3 - Dataset and Variable Mapping
+## Slide 3 - Objectives
+### Slide Title
+**Analytical Objectives**
+
+### On-Slide Content
+1) Identify which content categories show highest resonance (views)
+2) Test whether category meaningfully affects resonance (ANOVA)
+3) Quantify and predict engagement from resonance (correlation + regression)
+
+### Speaker Notes
+"These objectives guide the structure of the workflow: we start with descriptive comparisons by category, then confirm differences with hypothesis testing, and finally estimate a predictive relationship between views and subscribers." 
+
+### Transition
+"Now we show the dataset and the variables we mapped to resonance and engagement." 
+
+---
+
+## Slide 4 - Dataset and Variable Mapping
 ### Slide Title
 **Dataset Overview and Variable Definitions**
 
@@ -78,7 +94,7 @@ Use this as your final speaking and slide-content reference.
 
 ---
 
-## Slide 4 - Data Cleaning and Preparation
+## Slide 5 - Data Cleaning and Preparation
 ### Slide Title
 **Data Cleaning Pipeline**
 
@@ -104,7 +120,7 @@ Use this as your final speaking and slide-content reference.
 
 ---
 
-## Slide 5 - Descriptive Analytics
+## Slide 6 - Descriptive Analytics
 ### Slide Title
 **Descriptive Analytics: Which Categories Resonate Most?**
 
@@ -126,7 +142,7 @@ Use this as your final speaking and slide-content reference.
 
 ---
 
-## Slide 6 - Inferential Analytics I (ANOVA)
+## Slide 7 - Inferential Analytics I (ANOVA)
 ### Slide Title
 **ANOVA: Does Category Significantly Affect Engagement (Views)?**
 
@@ -149,7 +165,7 @@ Use this as your final speaking and slide-content reference.
 
 ---
 
-## Slide 7 - Inferential Analytics II (Correlation)
+## Slide 8 - Inferential Analytics II (Correlation)
 ### Slide Title
 **Correlation Test: Quantity (Uploads) vs Engagement (Subscribers)**
 
@@ -170,7 +186,7 @@ Use this as your final speaking and slide-content reference.
 
 ---
 
-## Slide 8 - Predictive Analytics (Linear Regression)
+## Slide 9 - Predictive Analytics (Linear Regression)
 ### Slide Title
 **Predictive Model: Subscribers from Video Views**
 
@@ -190,7 +206,7 @@ Use this as your final speaking and slide-content reference.
 
 ---
 
-## Slide 9 - Integrated Findings
+## Slide 10 - Integrated Findings
 ### Slide Title
 **Integrated Statistical Story**
 
@@ -211,7 +227,7 @@ Use this as your final speaking and slide-content reference.
 
 ---
 
-## Slide 10 - Limitations and Method Improvements
+## Slide 11 - Limitations and Method Improvements
 ### Slide Title
 **Limitations and Future Enhancements**
 
@@ -229,11 +245,30 @@ Use this as your final speaking and slide-content reference.
 "Our findings are strong but still correlational in nature. For a stronger causal argument, we would need richer controls or quasi-experimental design. For modelling quality, multiple regression and transformed variables would improve stability and interpretability."
 
 ### Transition
-"With these considerations, we can now state our final conclusion."
+"With these considerations, we can now make our final decision on the statement."
 
 ---
 
-## Slide 11 - Final Conclusion
+## Slide 12 - Final Decision
+### Slide Title
+**Final Decision**
+
+### On-Slide Content
+- Decision on statement: **Supported (evidence of association)**
+- ANOVA: p-value < 0.05 → category impacts resonance (views)
+- Regression: p < 0.05, R² = 0.6794 → views strongly relate to subscribers
+- Uploads–subscribers: r = 0.0889 → quantity effect is weak
+- Implication: engagement aligns more with resonance than upload volume
+
+### Speaker Notes
+"We make a final decision using our inferential and predictive results. The statement is supported as an association: category influences views significantly, views predict subscribers strongly, and upload quantity shows only a weak relationship with subscribers."
+
+### Transition
+"Now we summarize the key takeaway and implications."
+
+---
+
+## Slide 13 - Final Conclusion
 ### Slide Title
 **Conclusion**
 
@@ -254,7 +289,7 @@ Use this as your final speaking and slide-content reference.
 
 ---
 
-## Slide 12 - Viva and Q&A Backup
+## Slide 14 - Viva and Q&A Backup
 ### Slide Title
 **Viva Readiness**
 
@@ -296,10 +331,10 @@ Use this as your final speaking and slide-content reference.
 ---
 
 ## Appendix B - Team Speaking Split (Recommended)
-- Member 1: Slides 1-3
-- Member 2: Slides 4-5
-- Member 3: Slides 6-7
-- Member 4: Slides 8-12
+- Member 1: Slides 1-4
+- Member 2: Slides 5-6
+- Member 3: Slides 7-8
+- Member 4: Slides 9-14
 
 ---
 
