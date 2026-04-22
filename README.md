@@ -15,7 +15,7 @@ The workflow covers **Descriptive**, **Inferential**, and **Predictive** analyti
 
 ## Dataset
 We use the **Global YouTube Statistics** dataset:
-- Source file: [Global YouTube Statistics.csv]([dataset/Global%20YouTube%20Statistics.csv](https://www.kaggle.com/datasets/nelgiriyewithana/global-youtube-statistics-2023))
+- Source file: [Global YouTube Statistics.csv]((https://www.kaggle.com/datasets/nelgiriyewithana/global-youtube-statistics-2023))
 
 after cleaning:
 - Usable records: **987** (rows removed: **8**)
